@@ -5,12 +5,7 @@ interface KpiCardProps {
   className?: string
 }
 
-export default function KpiCard({
-  value,
-  label,
-  sublabel,
-  className = '',
-}: KpiCardProps) {
+export default function KpiCard({ value, label, sublabel, className = '' }: KpiCardProps) {
   return (
     <article
       className={`bg-surface-raised border border-border-default rounded-card p-6 flex flex-col justify-between hover:border-primary-600/30 transition-all duration-300 group ${className}`}
@@ -30,13 +25,9 @@ export default function KpiCard({
       </dl>
 
       {/* Label (visible, not part of dl to allow flexible styling) */}
-      <p className="text-base sm:text-lg font-semibold text-white mb-1 leading-tight">
-        {label}
-      </p>
+      <p className="text-base sm:text-lg font-semibold text-white mb-1 leading-tight">{label}</p>
 
-      {sublabel && (
-        <p className="text-xs sm:text-sm text-text-subtle leading-snug">{sublabel}</p>
-      )}
+      {sublabel && <p className="text-xs sm:text-sm text-text-subtle leading-snug">{sublabel}</p>}
     </article>
   )
 }

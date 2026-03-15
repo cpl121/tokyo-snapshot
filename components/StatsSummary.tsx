@@ -14,7 +14,10 @@ function StatsSummaryInner({ kpiSummary }: { kpiSummary: KpiItem[] }) {
   const t = useTranslations('summary')
 
   return (
-    <section aria-labelledby="kpi-heading" className="bg-surface-subtle border-y border-border-faint">
+    <section
+      aria-labelledby="kpi-heading"
+      className="bg-surface-subtle border-y border-border-faint"
+    >
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <ScrollReveal className="text-center mb-12">
           <p className="label-eyebrow mb-2">{t('eyebrow')}</p>

@@ -5,39 +5,39 @@
 /* ─── Design Tokens ────────────────────────────────────────────────────────── */
 :root {
   /* Surfaces */
-  --color-surface-base:    #0a0a0a;
-  --color-surface-subtle:  #0d0d0d;
-  --color-surface-raised:  #111111;
+  --color-surface-base: #0a0a0a;
+  --color-surface-subtle: #0d0d0d;
+  --color-surface-raised: #111111;
   --color-surface-overlay: #0e0e0e;
 
   /* Borders */
-  --color-border-faint:   #1a1a1a;
+  --color-border-faint: #1a1a1a;
   --color-border-default: #1f1f1f;
-  --color-border-muted:   #2a2a2a;
+  --color-border-muted: #2a2a2a;
 
   /* Text */
-  --color-text-primary:   #ffffff;
-  --color-text-muted:     #9ca3af;
-  --color-text-subtle:    #6b7280;
-  --color-text-faint:     #374151;
+  --color-text-primary: #ffffff;
+  --color-text-muted: #9ca3af;
+  --color-text-subtle: #6b7280;
+  --color-text-faint: #374151;
 
   /* Accent */
-  --color-accent:       #DC2626;
-  --color-accent-hover: #B91C1C;
+  --color-accent: #dc2626;
+  --color-accent-hover: #b91c1c;
   --color-accent-light: rgb(220 38 38 / 0.08);
 
   /* Focus ring */
-  --focus-ring-color:  #DC2626;
+  --focus-ring-color: #dc2626;
   --focus-ring-offset: 2px;
-  --focus-ring-width:  2px;
+  --focus-ring-width: 2px;
 
   /* Legacy aliases (keep for backward compat) */
-  --background:   var(--color-surface-base);
-  --foreground:   var(--color-text-primary);
-  --card:         var(--color-surface-raised);
-  --card-border:  var(--color-border-default);
-  --muted:        var(--color-text-muted);
-  --accent:       var(--color-accent);
+  --background: var(--color-surface-base);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-surface-raised);
+  --card-border: var(--color-border-default);
+  --muted: var(--color-text-muted);
+  --accent: var(--color-accent);
   --accent-hover: var(--color-accent-hover);
 }
 
@@ -51,7 +51,11 @@ html {
 body {
   background-color: var(--color-surface-base);
   color: var(--color-text-primary);
-  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-family:
+    var(--font-inter),
+    system-ui,
+    -apple-system,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* Prevent layout shift from scrollbar */
@@ -76,7 +80,7 @@ body {
 
 /* Slightly larger offset for buttons with their own border-radius */
 button:focus-visible,
-[role="button"]:focus-visible {
+[role='button']:focus-visible {
   outline-offset: 3px;
 }
 

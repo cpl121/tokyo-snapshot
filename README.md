@@ -8,12 +8,12 @@ A data landing page built with Next.js 15, GSAP and Lenis that digs deep into th
 
 ## Key stats
 
-| Indicator | Figure |
-|---|---|
-| Population (metropolitan area) | **37 million** residents |
-| Global urban economy | **2nd place** by metropolitan GDP |
-| Crime index | **24.33** — rated Low (Numbeo 2025) |
-| Female life expectancy | **87 years** — 6th worldwide male ranking |
+| Indicator                      | Figure                                    |
+| ------------------------------ | ----------------------------------------- |
+| Population (metropolitan area) | **37 million** residents                  |
+| Global urban economy           | **2nd place** by metropolitan GDP         |
+| Crime index                    | **24.33** — rated Low (Numbeo 2025)       |
+| Female life expectancy         | **87 years** — 6th worldwide male ranking |
 
 ## Sections
 
@@ -38,16 +38,16 @@ The site covers **14 data categories** with tables, visual indicators and compar
 
 ## Tech stack
 
-| Technology | Version | Purpose |
-|---|---|---|
-| Next.js | 15.1 | Framework — App Router, SSG |
-| React | 19 | UI |
-| TypeScript | 5 | Static typing |
-| Tailwind CSS | 3.4 | Styles |
-| GSAP + ScrollTrigger | 3.14 | Animations and scroll-driven effects |
-| @gsap/react | 2.1 | `useGSAP` hook for React 18+ |
-| Lenis | 1.3 | Smooth scroll |
-| next-intl | 4.x | Internationalisation (ES / EN) |
+| Technology           | Version | Purpose                              |
+| -------------------- | ------- | ------------------------------------ |
+| Next.js              | 15.1    | Framework — App Router, SSG          |
+| React                | 19      | UI                                   |
+| TypeScript           | 5       | Static typing                        |
+| Tailwind CSS         | 3.4     | Styles                               |
+| GSAP + ScrollTrigger | 3.14    | Animations and scroll-driven effects |
+| @gsap/react          | 2.1     | `useGSAP` hook for React 18+         |
+| Lenis                | 1.3     | Smooth scroll                        |
+| next-intl            | 4.x     | Internationalisation (ES / EN)       |
 
 ## Animations
 
@@ -59,10 +59,10 @@ The site covers **14 data categories** with tables, visual indicators and compar
 
 ## Internationalisation
 
-| URL | Language |
-|---|---|
-| `/` | Spanish (default) |
-| `/en` | English |
+| URL   | Language          |
+| ----- | ----------------- |
+| `/`   | Spanish (default) |
+| `/en` | English           |
 
 Language is switched via the `ES / EN` toggle in the navbar. All UI strings live in `messages/es.json` and `messages/en.json`. Statistical data has parallel Spanish (`lib/stats.ts`) and English (`lib/stats.en.ts`) versions.
 

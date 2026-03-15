@@ -47,7 +47,6 @@ export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
     >
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-
           {/* Logo / Brand */}
           <div className="flex items-center gap-3" aria-label={t('brand')}>
             <span className="text-2xl font-bold text-primary-600 leading-none" aria-hidden="true">
@@ -70,9 +69,18 @@ export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
               aria-label={isOpen ? t('closeMenu') : t('openMenu')}
               className="flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:outline-offset-2"
             >
-              <span aria-hidden="true" className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-              <span aria-hidden="true" className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? 'opacity-0 scale-x-0' : ''}`} />
-              <span aria-hidden="true" className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+              <span
+                aria-hidden="true"
+                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}
+              />
+              <span
+                aria-hidden="true"
+                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? 'opacity-0 scale-x-0' : ''}`}
+              />
+              <span
+                aria-hidden="true"
+                className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`}
+              />
             </button>
           </div>
         </div>

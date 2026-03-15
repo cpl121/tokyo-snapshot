@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react'
 import { gsap, ScrollTrigger } from '@/lib/gsap'
 
 interface AnimatedBarProps {
-  value: number          // 0-100
+  value: number // 0-100
   color?: 'red' | 'green'
   className?: string
 }

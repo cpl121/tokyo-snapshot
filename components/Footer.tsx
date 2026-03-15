@@ -51,19 +51,18 @@ export default function Footer() {
   return (
     <footer className="bg-[#080808] border-t border-border-faint">
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12">
-
         {/* Brand + tagline */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8">
           <div className="flex items-center gap-3">
-            <span aria-hidden="true" className="text-3xl font-bold text-primary-600">東京</span>
+            <span aria-hidden="true" className="text-3xl font-bold text-primary-600">
+              東京
+            </span>
             <div>
               <p className="text-sm font-semibold text-white">東京</p>
               <p className="text-xs text-text-faint">2024–2025</p>
             </div>
           </div>
-          <p className="text-xs text-text-faint max-w-sm leading-relaxed">
-            {t('tagline')}
-          </p>
+          <p className="text-xs text-text-faint max-w-sm leading-relaxed">{t('tagline')}</p>
         </div>
 
         <div aria-hidden="true" className="h-px bg-border-faint mb-8" />
@@ -91,9 +90,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 mt-8 pt-6 border-t border-border-faint">
-          <p className="text-xs text-text-faint">
-            {t('disclaimer')}
-          </p>
+          <p className="text-xs text-text-faint">{t('disclaimer')}</p>
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 flex-shrink-0 text-xs text-text-faint">
             <span>
               {t('developedBy')}{' '}

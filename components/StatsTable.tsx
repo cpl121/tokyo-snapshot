@@ -11,9 +11,7 @@ export default function StatsTable({ rows, caption }: StatsTableProps) {
   return (
     <div className="overflow-x-auto rounded-card border border-border-default">
       <table className="w-full min-w-[400px]">
-        {caption && (
-          <caption className="sr-only">{caption}</caption>
-        )}
+        {caption && <caption className="sr-only">{caption}</caption>}
         <thead>
           <tr className="border-b border-border-default bg-surface-subtle">
             <th

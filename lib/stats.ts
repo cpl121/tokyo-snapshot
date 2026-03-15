@@ -51,8 +51,7 @@ export const sections: StatSection[] = [
     id: 'densidad',
     title: 'Densidad de Población',
     icon: '🗺️',
-    description:
-      'Tokio es la prefectura con mayor densidad de población de todo Japón.',
+    description: 'Tokio es la prefectura con mayor densidad de población de todo Japón.',
     rows: [
       {
         label: 'Densidad media (metrópoli)',

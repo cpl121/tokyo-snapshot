@@ -10,12 +10,7 @@ interface SectionHeaderProps {
   description?: string
 }
 
-export default function SectionHeader({
-  id,
-  icon,
-  title,
-  description,
-}: SectionHeaderProps) {
+export default function SectionHeader({ id, icon, title, description }: SectionHeaderProps) {
   const ref = useRef<HTMLDivElement>(null)
 
   useGSAP(
@@ -35,8 +30,15 @@ export default function SectionHeader({
         },
       })
 
-      if (bar) tl.from(bar, { scaleY: 0, duration: 0.4, ease: 'power2.out', transformOrigin: 'top center' })
-      if (heading) tl.from(heading, { opacity: 0, x: -16, duration: 0.45, ease: 'power3.out' }, '-=0.2')
+      if (bar)
+        tl.from(bar, {
+          scaleY: 0,
+          duration: 0.4,
+          ease: 'power2.out',
+          transformOrigin: 'top center',
+        })
+      if (heading)
+        tl.from(heading, { opacity: 0, x: -16, duration: 0.45, ease: 'power3.out' }, '-=0.2')
       if (desc) tl.from(desc, { opacity: 0, y: 10, duration: 0.4, ease: 'power2.out' }, '-=0.15')
     },
     { scope: ref }
@@ -55,9 +57,7 @@ export default function SectionHeader({
           <span className="text-2xl" aria-hidden="true">
             {icon}
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-            {title}
-          </h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">{title}</h2>
         </div>
       </div>
       {description && (

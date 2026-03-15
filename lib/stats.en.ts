@@ -77,7 +77,7 @@ export const sectionsEn: StatSection[] = [
     title: 'Businesses & Companies',
     icon: '🏢',
     description:
-      "Tokyo accounts for over 10% of all businesses in Japan and hosts 75% of the foreign companies present in the country.",
+      'Tokyo accounts for over 10% of all businesses in Japan and hosts 75% of the foreign companies present in the country.',
     rows: [
       { label: 'Total companies in Tokyo', value: '>660,000' },
       { label: 'Share of national total', value: '>10%' },
@@ -185,7 +185,7 @@ export const sectionsEn: StatSection[] = [
     title: 'Life Expectancy',
     icon: '❤️',
     description:
-      "Japan has one of the highest life expectancies in the world. Tokyo, with top-tier healthcare access, sits at or above the national average.",
+      'Japan has one of the highest life expectancies in the world. Tokyo, with top-tier healthcare access, sits at or above the national average.',
     rows: [
       { label: 'Male life expectancy (Japan)', value: '81.09 years', note: '2024' },
       { label: 'Female life expectancy (Japan)', value: '87.13 years', note: '2024' },
@@ -218,7 +218,7 @@ export const sectionsEn: StatSection[] = [
     title: 'Foreign Population',
     icon: '🌏',
     description:
-      "Tokyo attracts record levels of international migration, with a growing foreign presence in the central districts.",
+      'Tokyo attracts record levels of international migration, with a growing foreign presence in the central districts.',
     rows: [
       { label: 'Total foreign residents in Tokyo', value: '>647,000', note: '2024' },
       { label: "% of Tokyo's total population", value: '~4.5-4.6%', note: '2024' },

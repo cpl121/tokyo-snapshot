@@ -12,30 +12,30 @@ const config: Config = {
       colors: {
         // Semantic surface tokens (dark theme)
         surface: {
-          base:    '#0a0a0a', // page background
-          subtle:  '#0d0d0d', // alternate background
-          raised:  '#111111', // card background
+          base: '#0a0a0a', // page background
+          subtle: '#0d0d0d', // alternate background
+          raised: '#111111', // card background
           overlay: '#0e0e0e', // alternating table row
-          border:  '#151515', // faint separators
+          border: '#151515', // faint separators
         },
         // Border tokens
         border: {
-          faint:   '#1a1a1a',
+          faint: '#1a1a1a',
           default: '#1f1f1f',
-          muted:   '#2a2a2a',
+          muted: '#2a2a2a',
         },
         // Text tokens
         text: {
-          primary:   '#ffffff',
+          primary: '#ffffff',
           secondary: '#e5e7eb',
-          muted:     '#9ca3af',
-          subtle:    '#6b7280',
-          faint:     '#374151',
+          muted: '#9ca3af',
+          subtle: '#6b7280',
+          faint: '#374151',
         },
         // Tokio Red – primary accent
         primary: {
           DEFAULT: '#DC2626',
-          50:  '#FEF2F2',
+          50: '#FEF2F2',
           100: '#FEE2E2',
           200: '#FECACA',
           300: '#FCA5A5',
@@ -80,22 +80,22 @@ const config: Config = {
       keyframes: {
         'fade-in': {
           from: { opacity: '0', transform: 'translateY(8px)' },
-          to:   { opacity: '1', transform: 'translateY(0)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
         },
         'slide-down': {
           from: { opacity: '0', transform: 'translateY(-4px)' },
-          to:   { opacity: '1', transform: 'translateY(0)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
         },
       },
       animation: {
-        'fade-in':    'fade-in 0.4s ease both',
+        'fade-in': 'fade-in 0.4s ease both',
         'slide-down': 'slide-down 0.25s ease both',
       },
 
       // ─── Background Images ────────────────────────────────────────────────
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':  'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
