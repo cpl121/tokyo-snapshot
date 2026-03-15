@@ -1,95 +1,119 @@
-# 東京 Tokio en Cifras
+# 東京 Tokyo by the Numbers
 
-> Estadísticas completas de Tokio 2024–2025 — la ciudad más grande del mundo bajo el microscopio.
+> Comprehensive Tokyo statistics 2024–2025 — the world's largest city under the microscope.
 
-Una landing de datos construida con Next.js 15, GSAP y Lenis que explora en profundidad los números que definen Tokio: desde su megalópolis de 37 millones de habitantes hasta su índice de criminalidad de los más bajos del mundo.
+A data landing page built with Next.js 15, GSAP and Lenis that digs deep into the numbers that define Tokyo: from its 37-million-person megalopolis to one of the lowest crime rates in the world.
 
 ---
 
-## Estadísticas destacadas
+## Key stats
 
-| Indicador | Dato |
+| Indicator | Figure |
 |---|---|
-| Población (área metropolitana) | **37 millones** de habitantes |
-| Economía urbana mundial | **2.ª posición** global por PIB metropolitano |
-| Índice de criminalidad | **24,33** — clasificado como Bajo (Numbeo 2025) |
-| Esperanza de vida femenina | **87 años** — 6.º ranking mundial masculino |
+| Population (metropolitan area) | **37 million** residents |
+| Global urban economy | **2nd place** by metropolitan GDP |
+| Crime index | **24.33** — rated Low (Numbeo 2025) |
+| Female life expectancy | **87 years** — 6th worldwide male ranking |
 
-## Secciones
+## Sections
 
-La web cubre **14 categorías** de datos con tablas, indicadores visuales y contexto comparativo:
+The site covers **14 data categories** with tables, visual indicators and comparative context:
 
-1. **Población** — evolución histórica y proyecciones del Gran Tokio
-2. **Densidad de Población** — comparativa por distritos y prefecturas
-3. **Economía y PIB** — PIB metropolitano, sectores y crecimiento
-4. **Renta e Ingresos** — salario medio, distribución y coste relativo
-5. **Tasa de Paro** — desempleo histórico y comparativa internacional
-6. **Establecimientos y Empresas** — tejido empresarial y sectores dominantes
-7. **Delincuencia y Seguridad** — estadísticas de criminalidad y seguridad pública
-8. **Coste de Vida** — índices de precios, alquiler y poder adquisitivo
-9. **Vivienda y Alquiler** — mercado inmobiliario y tendencias de precio
-10. **Turismo** — llegadas, pernoctaciones y atracciones más visitadas
-11. **Transporte** — red de metro, trenes y movilidad urbana
-12. **Esperanza de Vida** — datos de salud y longevidad
-13. **Educación** — índices de escolarización y resultados académicos
-14. **Población Extranjera** — comunidades y distribución por nacionalidades
+1. **Population** — historical trends and projections for Greater Tokyo
+2. **Population Density** — breakdown by districts and prefectures
+3. **Economy & GDP** — metropolitan GDP, sectors and growth
+4. **Income & Wages** — average salary, distribution and relative cost
+5. **Unemployment Rate** — historical unemployment and international comparison
+6. **Businesses & Companies** — business fabric and dominant sectors
+7. **Crime & Safety** — crime statistics and public safety
+8. **Cost of Living** — price indices, rent and purchasing power
+9. **Housing & Rent** — real estate market and price trends
+10. **Tourism** — arrivals, overnight stays and top attractions
+11. **Transportation** — metro network, trains and urban mobility
+12. **Life Expectancy** — health data and longevity
+13. **Education** — enrolment rates and academic outcomes
+14. **Foreign Population** — communities and breakdown by nationality
 
 ---
 
-## Stack técnico
+## Tech stack
 
-| Tecnología | Versión | Uso |
+| Technology | Version | Purpose |
 |---|---|---|
 | Next.js | 15.1 | Framework — App Router, SSG |
 | React | 19 | UI |
-| TypeScript | 5 | Tipado estático |
-| Tailwind CSS | 3.4 | Estilos |
-| GSAP + ScrollTrigger | 3.14 | Animaciones y scroll-driven effects |
-| @gsap/react | 2.1 | Hook `useGSAP` para React 18+ |
+| TypeScript | 5 | Static typing |
+| Tailwind CSS | 3.4 | Styles |
+| GSAP + ScrollTrigger | 3.14 | Animations and scroll-driven effects |
+| @gsap/react | 2.1 | `useGSAP` hook for React 18+ |
 | Lenis | 1.3 | Smooth scroll |
+| next-intl | 4.x | Internationalisation (ES / EN) |
 
-## Animaciones
+## Animations
 
-- **Hero entrance** — timeline secuencial con kanji, titular, badges y scroll cue
-- **Scroll progress bar** — línea roja en la parte superior que crece con el scroll
-- **ScrollReveal** — fade-up con stagger en secciones y tarjetas al entrar en viewport
-- **SectionHeader** — barra vertical con `scaleY`, título deslizante y descripción encadenados en timeline
-- **Smooth scroll** — Lenis con lerp 0.08, integrado con ScrollTrigger via `lenis.on('scroll', ScrollTrigger.update)`
+- **Hero entrance** — sequential timeline: kanji, heading, stat badges and scroll cue
+- **Scroll progress bar** — thin red line at the top that grows with scroll
+- **ScrollReveal** — fade-up with stagger on sections and cards as they enter the viewport
+- **SectionHeader** — accent bar with `scaleY`, sliding title and chained description timeline
+- **Smooth scroll** — Lenis with lerp 0.08, integrated with ScrollTrigger via `lenis.on('scroll', ScrollTrigger.update)`
+
+## Internationalisation
+
+| URL | Language |
+|---|---|
+| `/` | Spanish (default) |
+| `/en` | English |
+
+Language is switched via the `ES / EN` toggle in the navbar. All UI strings live in `messages/es.json` and `messages/en.json`. Statistical data has parallel Spanish (`lib/stats.ts`) and English (`lib/stats.en.ts`) versions.
 
 ---
 
-## Desarrollo
+## Development
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
-npm run build      # build de producción
-npm run lint       # ESLint
-npm run format     # Prettier
+npm run dev          # http://localhost:3000
+npm run build        # production build
+npm run lint         # ESLint
+npm run format       # Prettier
+npm run format:check # Prettier check (CI)
 ```
 
-## Estructura
+## Project structure
 
 ```
 app/
-├── layout.tsx        # Root layout con Lenis + ScrollProgress
-├── page.tsx          # Landing — 14 secciones de estadísticas
+├── layout.tsx              # Root pass-through layout
+├── [locale]/
+│   ├── layout.tsx          # Locale layout — html/body, NextIntlClientProvider
+│   └── page.tsx            # Main page — 14 stats sections
 └── globals.css
 
 components/
-├── Hero.tsx          # Hero con animación GSAP timeline
-├── Navbar.tsx        # Navbar fija con hamburger menu
-├── StatsSummary.tsx  # KPI cards destacados
-├── SectionHeader.tsx # Cabecera animada por sección
-├── StatsTable.tsx    # Tabla de datos
-├── ScrollReveal.tsx  # Wrapper de animación scroll-triggered
-├── ScrollProgress.tsx # Barra de progreso de scroll
-├── SmoothScroll.tsx  # Provider de Lenis
-├── KpiCard.tsx       # Tarjeta de indicador clave
-├── AnimatedBar.tsx   # Barra visual de datos
-└── Footer.tsx
+├── Hero.tsx                # Hero with GSAP timeline animation
+├── Navbar.tsx              # Fixed navbar with hamburger menu + language switcher
+├── LanguageSwitcher.tsx    # ES / EN toggle
+├── StatsSummary.tsx        # KPI highlight cards
+├── SectionHeader.tsx       # Animated section heading
+├── StatsTable.tsx          # Data table
+├── ScrollReveal.tsx        # Scroll-triggered animation wrapper
+├── ScrollProgress.tsx      # Scroll progress bar
+├── SmoothScroll.tsx        # Lenis provider
+├── KpiCard.tsx             # Key indicator card
+├── AnimatedBar.tsx         # Data visualisation bar
+└── Footer.tsx              # Sources, credits, disclaimer
 
 lib/
-├── gsap.ts           # Configuración y exports de GSAP
-└── stats.ts          # Todos los datos estadísticos
+├── gsap.ts                 # GSAP setup and exports
+├── stats.ts                # Spanish statistical data
+├── stats.en.ts             # English statistical data
+└── stats.locale.ts         # getStats(locale) helper
+
+i18n/
+├── routing.ts              # next-intl routing config
+└── request.ts              # next-intl server config
+
+messages/
+├── es.json                 # Spanish UI strings
+└── en.json                 # English UI strings
 ```
