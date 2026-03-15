@@ -1,9 +1,16 @@
 'use client'
 
 import { useState, useEffect, useId } from 'react'
-import { navLinks } from '@/lib/stats'
+import { useTranslations } from 'next-intl'
+import LanguageSwitcher from './LanguageSwitcher'
 
-export default function Navbar() {
+interface NavLink {
+  id: string
+  label: string
+}
+
+export default function Navbar({ navLinks }: { navLinks: NavLink[] }) {
+  const t = useTranslations('nav')
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const menuId = useId()
@@ -14,7 +21,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Close menu on Escape
   useEffect(() => {
     if (!isOpen) return
     const handleKey = (e: KeyboardEvent) => {
@@ -32,7 +38,7 @@ export default function Navbar() {
 
   return (
     <nav
-      aria-label="Navegación principal"
+      aria-label={t('brand')}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
           ? 'bg-surface-base/95 backdrop-blur-md border-b border-border-default'
@@ -43,53 +49,40 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo / Brand */}
-          <div className="flex items-center gap-3" aria-label="Tokio en Cifras">
+          <div className="flex items-center gap-3" aria-label={t('brand')}>
             <span className="text-2xl font-bold text-primary-600 leading-none" aria-hidden="true">
               東京
             </span>
             <div className="hidden sm:block">
-              <p className="text-sm font-semibold text-white leading-tight">Tokio en Cifras</p>
-              <p className="text-xs text-text-subtle leading-tight">Estadísticas 2024–2025</p>
+              <p className="text-sm font-semibold text-white leading-tight">{t('brand')}</p>
+              <p className="text-xs text-text-subtle leading-tight">{t('tagline')}</p>
             </div>
           </div>
 
-          {/* Hamburger */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-controls={menuId}
-            aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
-            className="flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:outline-offset-2"
-          >
-            <span
-              aria-hidden="true"
-              className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-                isOpen ? 'rotate-45 translate-y-2' : ''
-              }`}
-            />
-            <span
-              aria-hidden="true"
-              className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-                isOpen ? 'opacity-0 scale-x-0' : ''
-              }`}
-            />
-            <span
-              aria-hidden="true"
-              className={`block h-0.5 w-6 bg-white transition-all duration-300 ${
-                isOpen ? '-rotate-45 -translate-y-2' : ''
-              }`}
-            />
-          </button>
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+
+            {/* Hamburger */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              aria-expanded={isOpen}
+              aria-controls={menuId}
+              aria-label={isOpen ? t('closeMenu') : t('openMenu')}
+              className="flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary-600 focus-visible:outline-offset-2"
+            >
+              <span aria-hidden="true" className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span aria-hidden="true" className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? 'opacity-0 scale-x-0' : ''}`} />
+              <span aria-hidden="true" className={`block h-0.5 w-6 bg-white transition-all duration-300 ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Dropdown menu */}
       <div
         id={menuId}
         aria-hidden={!isOpen}
-        className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? 'max-h-screen animate-slide-down' : 'max-h-0'
-        }`}
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-screen animate-slide-down' : 'max-h-0'}`}
       >
         <div className="bg-surface-subtle/98 backdrop-blur-md border-t border-border-default px-4 py-4">
           <div className="grid grid-cols-2 gap-1" role="list">

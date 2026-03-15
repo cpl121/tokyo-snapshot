@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "eyebrow": "Data 2024–2025",
+    "h1": "Tokyo",
+    "h1Accent": " by the Numbers",
+    "description1": "The world's largest city under the microscope.",
+    "description2": "Comprehensive statistics on population, economy, safety and quality of life.",
+    "scrollCue": "Explore",
+    "statsAriaLabel": "Key indicators"
+  },
+  "summary": {
+    "eyebrow": "In perspective",
+    "heading": "The numbers that define Tokyo",
+    "description": "Four key indicators that put Tokyo on the global map"
+  },
+  "nav": {
+    "brand": "Tokyo by the Numbers",
+    "tagline": "Statistics 2024–2025",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "footer": {
+    "tagline": "A compilation of public statistics. Data sourced from official and internationally recognized organizations.",
+    "sourcesTitle": "Data sources",
+    "disclaimer": "Data presented is for informational purposes only. Please consult the original sources for verification.",
+    "developedBy": "Developed by",
+    "copyright": "© 2024-2026"
+  },
+  "page": {
+    "unemploymentNote": "Japan maintains one of the lowest unemployment rates among OECD countries. Tokyo's labour market, as the national economic engine, typically sits below the country average.",
+    "crimeIndexLabel": "Crime index",
+    "crimeIndexNote": "From 0 (safest) to 100 (most dangerous) · Numbeo 2025",
+    "safetyIndexLabel": "Safety index",
+    "safetyIndexNote": "From 0 (least safe) to 100 (safest) · Numbeo 2025",
+    "tourismRecordLabel": "All-time record 2024",
+    "tourismRecordValue": "36.9 million foreign tourists",
+    "tourismRecordSub": "arrived in Japan in 2024",
+    "metroLines": "Metro lines",
+    "metroStations": "Stations",
+    "metroNetwork": "Total network",
+    "foreignGroupsTitle": "Main foreign groups in Tokyo",
+    "foreignGroup1": "1st Chinese",
+    "foreignGroup1Count": ">257,000",
+    "foreignGroup2": "2nd Koreans",
+    "foreignGroup2Count": "Second group",
+    "foreignGroup3": "3rd Vietnamese",
+    "foreignGroup3Count": "Third group",
+    "foreignGroupOther": "Others",
+    "foreignGroupOtherCount": "Rest of the world",
+    "executiveSummaryLabel": "Executive summary",
+    "executiveSummaryText": "Tokyo is the world's most populous metropolitan area and one of the most economically significant, generating over 21% of Japan's GDP. It maintains one of the lowest crime rates among major global cities, a life expectancy ranking among the world's highest, and an internationally recognized education system. Despite Japan's demographic decline, Tokyo continues to attract record levels of domestic and international migration."
+  },
+  "meta": {
+    "title": "Tokyo by the Numbers | Statistics 2024–2025",
+    "description": "Comprehensive Tokyo statistics 2024–2025: population, economy, GDP, income, unemployment, safety, cost of living, tourism, transport, education and life expectancy.",
+    "skipLink": "Skip to main content"
+  }
+}

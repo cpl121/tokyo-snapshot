@@ -1,0 +1,58 @@
+{
+  "hero": {
+    "eyebrow": "Datos 2024–2025",
+    "h1": "Tokio",
+    "h1Accent": " en Cifras",
+    "description1": "La ciudad más grande del mundo bajo el microscopio.",
+    "description2": "Estadísticas completas de población, economía, seguridad y calidad de vida.",
+    "scrollCue": "Explorar",
+    "statsAriaLabel": "Indicadores destacados"
+  },
+  "summary": {
+    "eyebrow": "En perspectiva",
+    "heading": "Los números que definen Tokio",
+    "description": "Cuatro indicadores clave que sitúan a Tokio en el mapa global"
+  },
+  "nav": {
+    "brand": "Tokio en Cifras",
+    "tagline": "Estadísticas 2024–2025",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "footer": {
+    "tagline": "Recopilación de estadísticas públicas. Los datos provienen de fuentes oficiales y organizaciones internacionales reconocidas.",
+    "sourcesTitle": "Fuentes de datos",
+    "disclaimer": "Los datos presentados son de carácter informativo. Consulte las fuentes originales para verificación.",
+    "developedBy": "Desarrollado por",
+    "copyright": "© 2024-2026"
+  },
+  "page": {
+    "unemploymentNote": "Japón mantiene una de las tasas de desempleo más bajas de la OCDE. El mercado laboral de Tokio como motor económico nacional se sitúa habitualmente por debajo de la media del país.",
+    "crimeIndexLabel": "Índice de criminalidad",
+    "crimeIndexNote": "De 0 (más seguro) a 100 (más peligroso) · Numbeo 2025",
+    "safetyIndexLabel": "Índice de seguridad",
+    "safetyIndexNote": "De 0 (menos seguro) a 100 (más seguro) · Numbeo 2025",
+    "tourismRecordLabel": "Récord histórico 2024",
+    "tourismRecordValue": "36,9 millones de turistas extranjeros",
+    "tourismRecordSub": "llegaron a Japón en 2024",
+    "metroLines": "Líneas de metro",
+    "metroStations": "Estaciones",
+    "metroNetwork": "Red total",
+    "foreignGroupsTitle": "Principales grupos de extranjeros en Tokio",
+    "foreignGroup1": "1.º Chinos",
+    "foreignGroup1Count": ">257.000",
+    "foreignGroup2": "2.º Coreanos",
+    "foreignGroup2Count": "Segundo grupo",
+    "foreignGroup3": "3.º Vietnamitas",
+    "foreignGroup3Count": "Tercer grupo",
+    "foreignGroupOther": "Otros",
+    "foreignGroupOtherCount": "Resto del mundo",
+    "executiveSummaryLabel": "Resumen ejecutivo",
+    "executiveSummaryText": "Tokio es el área metropolitana más poblada del mundo y una de las más relevantes económicamente, generando más del 21% del PIB de Japón. Mantiene una de las tasas de criminalidad más bajas entre las grandes ciudades del planeta, una esperanza de vida entre las más altas del mundo y un sistema educativo de referencia global. A pesar del declive demográfico de Japón, Tokio sigue atrayendo migración interna e internacional en cifras récord."
+  },
+  "meta": {
+    "title": "Tokio en Cifras | Estadísticas 2024–2025",
+    "description": "Estadísticas completas de Tokio 2024–2025: población, economía, PIB, renta, desempleo, seguridad, coste de vida, turismo, transporte, educación y esperanza de vida.",
+    "skipLink": "Saltar al contenido principal"
+  }
+}
