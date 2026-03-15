@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+  /* Surfaces */
+  --color-surface-base:    #0a0a0a;
+  --color-surface-subtle:  #0d0d0d;
+  --color-surface-raised:  #111111;
+  --color-surface-overlay: #0e0e0e;
+
+  /* Borders */
+  --color-border-faint:   #1a1a1a;
+  --color-border-default: #1f1f1f;
+  --color-border-muted:   #2a2a2a;
+
+  /* Text */
+  --color-text-primary:   #ffffff;
+  --color-text-muted:     #9ca3af;
+  --color-text-subtle:    #6b7280;
+  --color-text-faint:     #374151;
+
+  /* Accent */
+  --color-accent:       #DC2626;
+  --color-accent-hover: #B91C1C;
+  --color-accent-light: rgb(220 38 38 / 0.08);
+
+  /* Focus ring */
+  --focus-ring-color:  #DC2626;
+  --focus-ring-offset: 2px;
+  --focus-ring-width:  2px;
+
+  /* Legacy aliases (keep for backward compat) */
+  --background:   var(--color-surface-base);
+  --foreground:   var(--color-text-primary);
+  --card:         var(--color-surface-raised);
+  --card-border:  var(--color-border-default);
+  --muted:        var(--color-text-muted);
+  --accent:       var(--color-accent);
+  --accent-hover: var(--color-accent-hover);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-surface-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Prevent layout shift from scrollbar */
+  scrollbar-gutter: stable;
+}
+
+/* ─── Focus Rings ───────────────────────────────────────────────────────────── */
+/*
+  Remove default focus ring; add a consistent, branded one for all interactive
+  elements. Keyboard-only focus is applied via :focus-visible so mouse clicks
+  don't show the ring.
+*/
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+  border-radius: 4px;
+}
+
+/* Slightly larger offset for buttons with their own border-radius */
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline-offset: 3px;
+}
+
+/* ─── Skip to Content ───────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: none;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ─── Scroll Margin ─────────────────────────────────────────────────────────── */
+/* Applied to both section[id] and div[id] (SectionHeader renders div[id]) */
+[id] {
+  scroll-margin-top: 5rem; /* accounts for sticky navbar height */
+}
+
+/* ─── Reduced Motion ────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ─── Utility Classes ───────────────────────────────────────────────────────── */
+@layer components {
+  /* Content wrapper — consistent horizontal padding + max-width */
+  .section-container {
+    @apply max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-16;
+  }
+
+  /* Base card style */
+  .card {
+    @apply bg-surface-raised border border-border-default rounded-card;
+  }
+
+  /* Muted body copy */
+  .text-muted {
+    @apply text-text-muted;
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply border-b border-border-faint;
+  }
+
+  /* Stat label (eyebrow text) */
+  .label-eyebrow {
+    @apply text-xs font-semibold tracking-widest uppercase text-primary-500;
+  }
+}
